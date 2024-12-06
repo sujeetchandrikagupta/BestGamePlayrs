@@ -1,0 +1,208 @@
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 50px;
+width: 80%;
+}
+
+.spinner-wrapper {
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#spinner {
+width: 300px;
+height: 300px;
+border: 5px solid #ccc;
+border-radius: 50%;
+position: relative;
+overflow: hidden;
+transition: transform 2s ease-out;
+}
+
+.segment {
+position: absolute;
+width: 50%;
+height: 50%;
+background-color: #f4f4f4;
+transform-origin: 100% 100%;
+clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.segment span {
+position: absolute;
+transform-origin: -100px 100px;
+transform: rotate(-90deg);
+width: 200px;
+text-align: center;
+font-size: 12px;
+font-weight: bold;
+}
+
+.spinner-arrow {
+position: absolute;
+top: -10px;
+left: 50%;
+transform: translateX(-50%);
+width: 0;
+height: 0;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-top: 20px solid red;
+}
+
+button {
+margin-top: 20px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+background-color: #007BFF;
+color: white;
+border-radius: 5px;
+}
+
+button:disabled {
+background-color: #ccc;
+}
+
+#spinButton {
+position: relative;
+margin-top: 20px;
+}
+
+.selected-list {
+flex: 1;
+}
+
+#selectedList {
+list-style-type: none;
+padding: 0;
+}
+
+#selectedList li {
+padding: 10px;
+margin: 5px 0;
+font-weight: bold;
+border: 1px solid #ccc;
+border-radius: 5px;
+text-align: left;
+}
+
+#selectedList li.yellow {
+background-color: yellow;
+color: black;
+}
+
+#selectedList li.green {
+background-color: green;
+color: white;
+}
+
+.message {
+text-align: center;
+margin-top: 20px;
+font-size: 18px;
+font-weight: bold;
+color: green;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+.container {
+    gap: 30px;
+    width: 90%;
+}
+
+#spinner {
+    width: 250px;
+    height: 250px;
+}
+
+button {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+}
+
+@media (max-width: 992px) {
+.container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.spinner-wrapper {
+    margin-bottom: 20px;
+}
+
+.selected-list {
+    text-align: center;
+}
+
+#spinner {
+    width: 200px;
+    height: 200px;
+}
+
+button {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+}
+
+@media (max-width: 768px) {
+.container {
+    gap: 10px;
+    width: 95%;
+}
+
+#spinner {
+    width: 180px;
+    height: 180px;
+}
+
+button {
+    font-size: 12px;
+    padding: 6px 12px;
+}
+
+.message {
+    font-size: 16px;
+}
+}
+
+@media (max-width: 480px) {
+.container {
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+#spinner {
+    width: 150px;
+    height: 150px;
+}
+
+button {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.message {
+    font-size: 14px;
+}
+}
+

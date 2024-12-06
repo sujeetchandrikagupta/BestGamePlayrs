@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner Game</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Spinner Section -->
+        <div class="spinner-wrapper">
+            <div id="spinner">
+                <div class="spinner-arrow"></div>
+            </div>
+            <button id="spinButton" onclick="startSpin()">Spin</button>
+        </div>
+
+        <!-- Selected Names Section -->
+        <div class="selected-list">
+            <div class="control-panel">
+                <input type="text" id="nameInput" placeholder="Enter name">
+                <button onclick="addName()">Add Name</button>
+                <p id="error" style="color: red;"></p>
+            </div>
+            <h2>✨✨Best Selected Playrs Names✨✨</h2>
+            <ul id="selectedList"></ul>
+            <div id="endMessage" class="message"></div>
+        </div>
+    </div>
+
+     <script src="JS/script.js"></script>
+</body>
+</html>
