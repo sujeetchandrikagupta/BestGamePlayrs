@@ -106,7 +106,7 @@ function updateSelectedList() {
         listItem.textContent = `${index + 1}. ${name}`;
 
         if (index === selectedNames.length - 1) {
-            listItem.className = 'green'; // Last name in green
+            listItem.className = '#FFD700;'; // Last name in green
         } else if (index === selectedNames.length - 2) {
             listItem.className = 'yellow'; // Second last in yellow
         }
