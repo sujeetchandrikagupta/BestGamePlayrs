@@ -108,7 +108,7 @@ function updateSelectedList() {
         if (index === selectedNames.length - 1) {
             listItem.className = 'yellow'; // Last name in yellow
         } else if (index === selectedNames.length - 2) {
-            listItem.className = 'grey'; // Second last in grey
+            listItem.className = 'green'; // Second last in grey
         }
 
         selectedList.appendChild(listItem);
